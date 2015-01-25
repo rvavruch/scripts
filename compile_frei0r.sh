@@ -1,7 +1,10 @@
 #!/bin/bash
+# See: https://github.com/jordansissel/fpm/wiki/PackageMakeInstall
 
+# delete existing package
 rm frei0r*.deb
 
+# create a deb package from /home/krokodil/src/bin/usr (change this path as needed)
 fpm -s dir -t deb -n frei0r-plugins -v 1.4 -C /home/krokodil/src/bin \
   -p frei0rplugins-VERSION_ARCH.deb \
   -m 'Rudolf Vavruch <rudolf@antler.co.za>' \
